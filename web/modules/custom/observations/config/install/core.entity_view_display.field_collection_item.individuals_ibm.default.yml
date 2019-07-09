@@ -1,0 +1,84 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.individuals_ibm.field_ageclass
+    - field.field.field_collection_item.individuals_ibm.field_behaviour
+    - field.field.field_collection_item.individuals_ibm.field_birdname
+    - field.field.field_collection_item.individuals_ibm.field_heading
+    - field.field.field_collection_item.individuals_ibm.field_interaction
+    - field.field.field_collection_item.individuals_ibm.field_interactiontype
+    - field.field.field_collection_item.individuals_ibm.field_left_foot
+    - field.field.field_collection_item.individuals_ibm.field_right_foot
+    - field.field.field_collection_item.individuals_ibm.field_sex
+    - field.field.field_collection_item.individuals_ibm.field_winner
+    - field_collection.field_collection.individuals_ibm
+  module:
+    - options
+id: field_collection_item.individuals_ibm.default
+targetEntityType: field_collection_item
+bundle: individuals_ibm
+mode: default
+content:
+  field_ageclass:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_behaviour:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_birdname:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_heading:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_interaction:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_interactiontype:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_left_foot:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_right_foot:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_sex:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_winner:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+hidden: {  }

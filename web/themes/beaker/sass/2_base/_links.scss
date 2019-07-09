@@ -1,0 +1,33 @@
+// LINK STYLES
+// =============================================================================
+
+//General link styles
+a,
+a:link,
+a:visited {
+  @include font-regular;
+  text-decoration: none;
+  color: $red;
+  transition: all 0.3s ease 0s;
+}
+a:hover, a:focus {
+  text-decoration: none;
+  color: $black;
+}
+
+
+//page wrapepr content link styles
+// .page-wrapper .region-content-main article {
+//   a,
+//   a:link,
+//   a:visited {
+//     @include font-regular;
+//     text-decoration: none;
+//     color: $red;
+//     transition: all 0.3s ease 0s;
+//   }
+//   a:hover, a:focus {
+//     text-decoration: none;
+//     color: $black;
+//   }
+// }

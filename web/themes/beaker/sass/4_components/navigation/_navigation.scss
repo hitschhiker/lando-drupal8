@@ -1,0 +1,213 @@
+
+// NAVIGATION STYLES
+// =============================================================================
+// Main Superfish
+
+.block-superfish {
+  margin-top: 10px;
+  ul.menu.sf-menu {
+    display: block;
+    height: auto;
+    width:100%;
+    max-width: 680px;
+    z-index: 1000;
+    position: relative;
+    > li {
+      color:$black;
+      width: auto;
+      text-align: left;
+      margin-left: $gutter;
+      display: block;
+      &.active-trail {
+        color:$red;
+        > a {
+          color:$red;
+        }
+      }
+      a, a:link {
+        text-transform: uppercase;
+        color:$black;
+        @include font-bree-semibold;
+        @include font-size(15px);
+        letter-spacing: 0.6px;
+        display: block;
+        width: auto;
+        height: auto;
+        padding: 10px 18px;
+      }
+      &:hover > a{
+        color:$white;
+        background-color: $red;
+      }
+      // hover li
+      &.menuparent {
+        > ul {
+          background-color: $off-white;
+          padding:$gutter/2 0;
+          max-width: 270px;
+          margin-top: -5px;
+          li {
+            width: 100%;
+            text-align: left;
+            a {
+              font-family: $open-sans;
+              text-transform: none;
+              color: $black;
+              font-weight: 400;
+              text-align: left;
+              letter-spacing: 0.3px;
+              &:hover, &:focus , .sfHover {
+                color:$red;
+                background: transparent;
+              }
+            }
+            &.menuparent {
+              ul { display: none !important; }
+            }
+          }
+        }
+      }
+    }
+    &.sf-expanded{
+      li{
+        a{ background-color: $white; }
+      }
+    }
+  }
+
+
+
+  //mobi accordion superfish menu
+  ul.menu.sf-menu.sf-accordion.sf-expanded {
+    display: block;
+    height: auto;
+    width:100%;
+    max-width: 100%;
+    background-color: $off-white;
+    padding: $gutter 0;
+    top:36px !important; //only because the library itself does this
+    border-bottom: 4px solid $black;
+    @include breakpoint($mobile){
+      top: 60px !important;
+      padding: 0;
+      background-color: $white;
+    }
+    > li:last-child{
+      border-bottom: 0;
+    }
+    > li {
+      width: 100%;
+      float: none;
+      clear: both;
+      margin-left: 0;
+      padding: 6px 0;
+      background-color: $white;
+      border-bottom: 1px solid $off-white;
+      &:hover > a, &:focus > a {
+        color: $black;
+        font-size: 14px;
+      }
+      ul {
+        padding: 0;
+        margin-bottom: 0;
+        margin-top: 7px;
+        max-width: 100%;
+        li{
+          a{
+            &:before{
+              content: "\BB";
+              padding: 0 5px 0 10px;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+      &:after, &:before{
+        content: "";
+        width: 2px;
+        height: 10px;
+        position: absolute;
+        right: 20px;
+        top: 18px;
+        background-color: $black;
+        display: block;
+        z-index: 5;
+        transition: all .3s ease;
+        display: inline-block;
+      }
+      &:before{
+        transform: rotate(45deg);
+        right: 29px;
+      }
+      &:after{
+        right: 35px;
+        transform: rotate(-45deg);
+      }
+      &.sf-expanded {
+        &:before, &:after {
+          top: 18px;
+          height: 16px;
+          position: absolute;
+          background-color: $black;
+        }
+        &:before {
+          right: 32px;
+          @include rotate(-45deg);
+        }
+        &:after {
+          @include rotate(45deg);
+          right: 32px;
+        }
+      }
+    }
+  }
+  .sf-accordion-toggle {
+    cursor: pointer;
+    z-index: 1000;
+    position: absolute;
+    display: block;
+    right: $gutter;
+    top:0;
+    width: 30px;
+    height: 30px;
+    @include breakpoint($mobile){ top: 15px; }
+    a {
+      height: 30px;
+      width: 30px;
+      display: block;
+      cursor: pointer;
+      span {
+        margin: 4px 0;
+        width: 30px;
+        display: block;
+        height: 4px;
+        background: $black;
+        vertical-align: middle;
+        text-indent: -99999px;
+        @include transition(all 0.1s ease-in-out);
+        @include breakpoint($mobile){ width: 25px; }
+      }
+      &:before, &:after {
+        width: 25px;
+        height: 4px;
+        background-color: $black;
+        content: "";
+        display: block;
+        @include transition(all 0.1s ease-in-out);
+      }
+      &.sf-expanded {
+        span { background-color: transparent; }
+        &:before, &:after {
+          top: 10px;
+          position: absolute;
+        }
+        &:before {
+          @include rotate(-45deg);
+        }
+        &:after {
+          @include rotate(45deg);
+        }
+      }
+    }
+  }
+}

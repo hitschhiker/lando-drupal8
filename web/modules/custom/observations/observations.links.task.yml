@@ -1,0 +1,43 @@
+# Observation routing definition
+observation.settings_tab:
+  route_name: observation.settings
+  title: 'Settings'
+  base_route: observation.settings
+  
+entity.observation.canonical:
+  route_name: entity.observation.canonical
+  base_route: entity.observation.canonical
+  title: 'View'
+
+entity.observation.edit_form:
+  route_name: entity.observation.edit_form
+  base_route: entity.observation.canonical
+  title: Edit
+
+entity.observation.delete_form:
+  route_name:  entity.observation.delete_form
+  base_route:  entity.observation.canonical
+  title: Delete
+  weight: 10
+
+# Observation routing definition
+observation.settings_tab:
+  route_name: observation.settings
+  title: 'Settings'
+  base_route: observation.settings
+entity.observation.canonical:
+  route_name: entity.observation.canonical
+  base_route: entity.observation.canonical
+  title: 'View'
+
+entity.observation.edit_form:
+  route_name: entity.observation.edit_form
+  base_route: entity.observation.canonical
+  title: Edit
+
+entity.observation.delete_form:
+  route_name:  entity.observation.delete_form
+  base_route:  entity.observation.canonical
+  title: Delete
+  weight: 10
+

@@ -1,0 +1,87 @@
+// BASE FONT VARIABLES
+// =============================================================================
+
+$base-font-size:    16;
+$base-line-height:  24;
+
+$bree-serif: "bree-serif", Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$open-sans: "open-sans", Arial, 'Helvetica Neue', Helvetica, sans-serif;
+
+// FONT INCLUDES
+// =============================================================================
+
+// @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+// FONT MIXINS
+// =============================================================================
+
+//Opensans
+@mixin font-light {
+  font-family: $open-sans;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@mixin font-regular {
+  font-family: $open-sans;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin font-semi-bold {
+  font-family: $open-sans;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@mixin font-bold {
+  font-family: $open-sans;
+  font-style: normal;
+  font-weight: 700;
+}
+
+//Bree Serif
+
+@mixin font-bree-regular {
+  font-family: $bree-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin font-bree-italic {
+  font-family: $bree-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+@mixin font-bree-semibold {
+  font-family: $bree-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@mixin font-bree-bold {
+  font-family: $bree-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin h1 {
+  @extend h1;
+  @include font-bree-bold;
+}
+
+@mixin h2 {
+  @extend h2;
+  @include font-bree-bold;
+}
+
+@mixin h3 {
+  @extend h3;
+  @include font-bree-bold;
+}
+
+@mixin h4 {
+  @extend h4;
+  @include font-bree-bold;
+}

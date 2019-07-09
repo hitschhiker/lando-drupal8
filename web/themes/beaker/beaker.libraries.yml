@@ -1,0 +1,19 @@
+base:
+  version: VERSION
+  css:
+    theme:
+      css/styles.css: {}
+      css/owl.carousel.css: {}
+      css/animate.css: {}
+
+  js:
+    js/behaviors.js: {}
+    js/jquery.browser.min.js: {}
+    js/owl.carousel.min.js: {}
+    js/snow/snowfall.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupal.ajax
+    - core/drupalSettings
+    - core/jquery.once

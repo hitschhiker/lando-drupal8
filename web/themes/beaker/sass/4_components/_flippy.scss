@@ -1,0 +1,82 @@
+.flippy {
+  margin: $gutter*2 0 0 0;
+  padding:0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .flippy-previous , .flippy-next {
+    margin: auto;
+    flex:0 0 100%;
+    @include breakpoint($small-up) {
+      flex:0 0 50%;
+    }
+    list-style: none;
+    a, a:link {
+      //width: 100%;
+      //height: 100px;
+      display: block;
+      color:$white;
+      @include font-size(16,true);
+      @include font-bree-regular;
+      @include breakpoint($small-landscape) {
+        @include font-size(16,true);
+      }
+      @include breakpoint($small) {
+        @include font-size(16,true);
+      }
+      &:before, &:after {
+        color: $white;
+        display: inline-block;
+        width: $gutter;
+        height: $gutter;
+        transition: 0.3s all ease;
+      }
+      &:hover, &:focus {
+        color:$orange;
+        &:before, &:after {
+          color: $orange;
+        }
+      }
+    }
+  }
+  .flippy-previous {
+    background-color: $light-brown;
+    @include breakpoint($small) {
+      padding: $gutter $gutter;
+    }
+    @include breakpoint($small-up) {
+      text-align: right;
+      padding-left: $gutter*2;
+      padding: $gutter $gutter*2 $gutter 0;
+    }
+    a:before {
+      content: "<";
+      margin-right: $gutter;
+    }
+    a:hover, a:focus {
+      &:before {
+        margin-right: $gutter*1.5;
+      }
+    }
+  }
+  .flippy-next {
+    text-align: right;
+    background-color: $dark-brown;
+    @include breakpoint($small) {
+      padding: $gutter $gutter;
+    }
+    @include breakpoint($small-up) {
+      text-align: left;
+      padding: $gutter 0 $gutter $gutter*2;
+    }
+    a:after {
+      content: ">";
+      margin-left: $gutter;
+    }
+    a:hover, a:focus {
+      &:after {
+        margin-left: $gutter*1.5;
+      }
+    }
+  }
+}

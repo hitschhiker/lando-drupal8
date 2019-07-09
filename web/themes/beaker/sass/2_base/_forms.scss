@@ -1,0 +1,140 @@
+form{
+  .form-wrapper{
+    float: left;
+    clear: both;
+    width: 100%;
+    .description{
+      float: left;
+      clear: both;
+      margin-bottom: 10px;
+      @include font-size(14px, true);
+      @include font-light;
+      color: $body-text;
+    }
+  }
+  .field--type-geolocation{
+    width: 100%;
+    fieldset{
+      width: 100%;
+    }
+  }
+  .field--type-datetime{
+    margin-top: 16px;
+  }
+  label{
+    float: left;
+    clear: both;
+    @include font-light;
+  }
+
+  select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    height: 35px;
+    background: url(../images/icons/arrow-down.png) no-repeat right $grey_3;
+    background-size: 25px;
+    border: none;
+    float: left;
+    clear: both;
+    margin: 5px 0;
+    padding: 0 10px;
+  }
+
+  fieldset{
+    input{
+    }
+    label{
+      clear: none;
+      margin-left: 15px;
+      line-height: 30px;
+      @include breakpoint($mobile) { 
+        width: 75%;
+      }
+    }
+  }
+
+  details summary{
+    background: $grey_3;
+    background-size: 35px;
+    padding: 0 10px;
+    line-height: 35px;
+    height: 35px;
+    position: relative;
+    &:after{
+      content: '';
+      display: block;
+      height: 32px;
+      width: 32px;
+      right: 10px;
+      top: 0;
+      position: absolute;
+      background-size: contain;
+      background: url(../images/icons/arrow-down2.png) no-repeat center right;
+    }
+    &::-webkit-details-marker { display:none; }
+    &:before{ display: none; }
+    &:focus{
+      outline: none;
+    }
+  }
+  input{
+    border: none;
+    height: 35px;
+    background: $grey_3;
+    border: none;
+    padding: 5px 10px;
+    float: left;
+    clear: both;
+
+    &.button{
+      clear: none;
+    }
+    &.form-time{
+      margin-left: 10px;
+      clear: none;
+    }
+  }
+
+  textarea{
+    background: $grey_3;
+    border: none;
+    width: 100%;
+    padding: 10px;
+  }
+  .button{
+    height: 40px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    color: $white;
+    background-color: $orange;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 18px;
+    @include font-bree-regular;
+    @include transition(1s);
+    &:hover{
+      background-color: $dark-brown;
+    }
+  }
+
+  input,select,textarea{
+    &:focus{
+      outline: none;
+    }
+  }
+
+  h4,label, span,{
+    color: $body-text;
+    @include font-regular;
+    @include font-size(16px,true);
+  }
+  h4{
+    font-weight: 400 !important;
+  }
+
+}

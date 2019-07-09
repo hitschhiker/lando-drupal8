@@ -1,0 +1,42 @@
+.search-block-form {
+  top:$gutter/4; //4px
+  margin-bottom: $gutter/4;
+  form {
+    position: relative;
+    display: block;
+    &:after {
+      position: absolute;
+      background-image: url('../images/icons/search.svg');
+      color: $red;
+      width: 16px;
+      height: 16px;
+      content: " ";
+      display: block;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      right: 0px;
+      top: 10px;
+    }
+    height: auto;
+    width: 300px;
+    input {
+      height: 35px;
+      position: relative;
+      z-index: 550;
+      opacity: 0;
+      height: 30px;
+      padding: $gutter/5;
+      width: 100%;
+      border: 1px solid $red;
+    }
+    .form-submit {
+      display: none;
+    }
+    &.search-expand {
+      input {
+        opacity: 1;
+      }
+    }
+  }
+}

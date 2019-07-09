@@ -1,0 +1,74 @@
+{#
+/**
+ * @file observation.html.twig
+ * Default theme implementation to present Observation data.
+ *
+ * This template is used when viewing Observation pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_observation()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% extends 'themes/beaker/templates/page.html.twig' %}
+
+{%
+set node_classes = [
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+]
+%}
+
+{% block mainpage %}
+  
+{{ page.messages }}
+
+  {% if page.banner %}
+    <div class="content-wrapper clearfix">
+  {% else %}
+    <div class="content-wrapper top-push clearfix">
+  {% endif %}
+    {# Region Content Top #}
+
+      <div class="content-top clearfix">
+        <div class="inner">
+          {% if page.content_top %}
+            <div class="layout-container clearfix">
+              {{ page.content_top }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      {# Region Content Main #}
+      <main id="main" class="layout-main clearfix">
+        <div class="inner">
+          {% block title %}
+            {% if is_front == false %}
+              {{ title }}
+            {% endif %}
+          {% endblock %}
+          {{ page.content_main }} 
+        </div>
+      </main>
+
+      {# Region Content Bottom #}
+      <div class="content-bottom clearfix">
+        <div class="inner">
+          {% if page.content_bottom %}
+            <div class="layout-container clearfix">
+              {{ page.content_bottom }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

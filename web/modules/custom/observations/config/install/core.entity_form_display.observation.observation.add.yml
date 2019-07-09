@@ -1,0 +1,120 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.observation.add
+    - image.style.thumbnail
+  module:
+    - country
+    - datetime
+    - field_collection
+    - geolocation
+    - image
+    - observations
+id: observation.observation.add
+targetEntityType: observation
+bundle: observation
+mode: add
+content:
+  address:
+    type: string_textfield
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  country:
+    type: country_default
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+  date:
+    type: datetime_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  email:
+    type: email_default
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  firstname:
+    type: string_textfield
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  location:
+    type: string_textfield
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  number:
+    type: number
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  obs_image:
+    type: image_image
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  observation_marks:
+    type: field_collection_embed
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  phone:
+    type: string_textfield
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  plz:
+    type: string_textfield
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  position:
+    type: geolocation_googlegeocoder
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  remarks:
+    type: string_textarea
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  time:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  distance: true
+  individuals_ibm: true
+  quality: true
+  remarks_admin: true
+  status: true

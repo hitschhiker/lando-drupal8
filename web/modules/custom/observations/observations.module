@@ -1,0 +1,90 @@
+<?php
+
+/**
+ * @file
+ * Contains observations.module.
+ */
+
+use \Drupal\Core\Entity\Display\EntityFormDisplayInterface;
+
+function observations_js_alter(&$javascript) {
+    $javascript[drupal_get_path("module", "geolocation") . "/js/geolocation.js"]["data"] = drupal_get_path("module", "observations") . "/js/geolocation_custom.js";
+}
+
+function observations_theme($existing, $type, $theme, $path) {
+  return array(
+    "observations_observed_marks_field_collection" => array(
+      "render element" => "element",
+    ),
+    "observations_observed_marks_field_collection_item" => array(
+        "render element" => "element",
+    ),
+    "observations-individuals-ibm-field-collection-item" => array(
+      "render element" => "element",
+    )
+  );
+}
+
+function observations_mail($key, &$message, $params) {
+  $entity = $params["entity"];
+
+  switch ($key) {
+    case "observation_added":
+      $message["from"] = \Drupal::config("system.site")->get("mail");
+      $message["subject"] = "New Bearded vulture observation added";
+      //$message["subject"] = t("Article created: @title", array("@title" => "Test"), $options);
+      $text[] = "New Bearded vulture observation added:˙\n";
+      $text[] = "Link: http://bartgeier.ch/beobachtung/".$entity->id()."\n";
+      if($entity->date->value != "")
+        $text[] = "Date of observation: ".$entity->date->value."\n";
+      if($entity->time->value != "")
+        $text[] = "Approximate time of observation: ".$entity->time->value."\n";
+      if($entity->number->value != "")
+        $text[] = "Observed Individuals: ".$entity->number->value."\n";
+      
+      $i = 1;
+      foreach ($entity->observation_marks as $item) {
+        
+        $text[] = "Individum ".$i."\n";
+        $collectionItem = entity_load("field_collection_item", $item->value);
+
+        foreach($collectionItem->field_list AS $listItem) {
+          $text[] = $listItem->getSettableOptions()[$listItem->value]."\n";
+        } 
+        $text[] = $collectionItem->field_remarks->value."\n";
+        $i++;
+      }
+      $text[] = "Location: http://www.google.com/maps/place/".$entity->position->lat.",".$entity->position->lng."\n";
+      
+      if(sizeof($entity->obs_image)) {
+        $text[] = "Images:";
+          $i = 1;
+          foreach ($entity->obs_image as $item) {
+            $text[] = "Image ".$i.": ".file_create_url($item->entity->getFileUri())."\">\n";
+            $i++;
+          }
+        $text[] = "\n";
+      }
+      if($entity->remarks->value != "")
+        $text[] = "General remarks: ".$entity->remarks->value."\n";
+      if($entity->email->value != "")
+        $text[] = "Email: ".$entity->email->value."\n";
+      if($entity->name->value != "")
+        $text[] = "Name: ".$entity->name->value."\n";
+      if($entity->firstname->value != "")
+        $text[] = "Firstname: ".$entity->firstname->value."\n";
+      if($entity->address->value != "")
+        $text[] = "Address: ".$entity->address->value."\n";
+      if($entity->plz->value != "")
+        $text[] = "Zip-Code: ".$entity->plz->value."\n";
+      if($entity->location->value != "")
+        $text[] = "Town: ".$entity->location->value."\n";
+      if($entity->country->value != "")
+        $text[] = "Country: ".$entity->country->value."\n";
+      if($entity->phone->value != "")
+        $text[] = "Phone: ".$entity->phone->value."\n";
+      
+      $message["body"] = $text;
+      break;
+  }
+}

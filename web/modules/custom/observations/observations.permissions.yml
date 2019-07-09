@@ -1,0 +1,32 @@
+add observation entities:
+  title: 'Create new Observation entities'
+
+administer observation entities:
+  title: 'Administer Observation entities'
+  description: 'Allow to access the administration form to configure Observation entities.'
+  restrict access: true
+
+delete observation entities:
+  title: 'Delete Observation entities'
+
+edit observation entities:
+  title: 'Edit Observation entities'
+
+view observation entities:
+  title: 'View Observation entities'
+add observation entities:
+  title: 'Create new Observation entities'
+
+administer observation entities:
+  title: 'Administer Observation entities'
+  description: 'Allow to access the administration form to configure Observation entities.'
+  restrict access: true
+
+delete observation entities:
+  title: 'Delete Observation entities'
+
+edit observation entities:
+  title: 'Edit Observation entities'
+
+view observation entities:
+  title: 'View Observation entities'

@@ -1,0 +1,67 @@
+// BORDER BOX
+// =============================================================================
+@include border-box-sizing;
+
+// CONFIGURE SUSY 2 GLOBAL DEFAULTS
+// =============================================================================
+
+$gutter: 16px;
+
+
+$susy: (
+  columns: 12,
+  gutters: 30px/70px,
+  column-width: 70px,
+  container: 1202px,//includes 32 px padding left right,
+  gutter-position: inside-static,
+  debug: (
+    //image: show-columns,
+    //color: rgba($red,0.3),
+    //change this for local dev, but a bit buggy
+    //output: overlay,
+    //toggle: bottom right,
+  ),
+);
+
+
+// GENERAL BREAKPOINTS
+// =============================================================================
+.grid {
+  clear: both;
+  padding-left:$gutter*2;
+  padding-right:$gutter*2;
+
+  @include breakpoint($tablet-up) {
+    @include container($susy);
+    //padding: 0 40px;
+  }
+
+// min-widths - so less wide to most wide
+  @include breakpoint($wide) {
+    @include container(12);
+  }
+
+  @include breakpoint($x-wide) {
+    @include container(12);
+  }
+
+  @include breakpoint($wide-max) {
+    @include container(12);
+  }
+
+  //below are max-widths - so wider to smaller
+  @include breakpoint($tablet) {
+    @include container(6);
+  }
+
+  @include breakpoint($mobile) {
+    @include container(4);
+  }
+
+  @include breakpoint($small) {
+    @include container(3);
+    padding-left:$gutter;
+    padding-right:$gutter;
+  }
+
+}

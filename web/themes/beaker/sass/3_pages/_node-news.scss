@@ -1,0 +1,43 @@
+.node--type-news {
+  .content-wrapper {
+    &.top-push {
+      margin-top:140px; // here for the header and the logged in tabs to be vis
+    }
+    article {
+      .default-wrapper {
+        padding-top: $gutter*3;
+        .created-time {
+          color:$grey_1;
+          margin: 0 auto $gutter;
+          text-align: center;
+          @include font-size(16,true);
+        }
+        h1 {
+          font-size: 48px;
+          line-height: 60px;
+          margin: auto;
+          text-align: center;
+          @include breakpoint($small) {
+            font-size: 44px;
+          }
+        }
+        > .field-image {
+          max-width: 546px;
+          margin: $gutter*4 auto $gutter*2;
+        }
+        .field-body {
+          max-width: $content-widths;
+          margin: 0 auto $gutter*2;
+          img {
+            margin: $gutter*2 auto;
+            text-align: center;
+            @include breakpoint($small-up) {
+              max-width: 65%;
+            }
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

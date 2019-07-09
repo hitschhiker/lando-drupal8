@@ -1,0 +1,65 @@
+.field--type-entity-reference {
+  //margin-bottom: $gutter*4;
+  &.field--name-field-bird {
+    .field__label {
+      &:before {
+        height: 1px;
+        width: $gutter*4;
+        display: block;
+        content: "";
+        background-color: $black;
+        margin: 40px auto;
+      }
+      @include font-size(15px, true);
+      @include font-bree-regular;
+      color: $off-grey;
+      padding: 0 0 40px 0;
+    }
+    .field__items {
+      display: flex;
+      justify-content: center;
+      @include breakpoint($mobile) {
+        justify-content: flex-start;
+      }
+      @include breakpoint($small) {
+        justify-content: center;
+      }
+      flex-wrap: wrap;
+      .field__item {
+        width: auto;
+        margin: 0 0 $gutter;
+        flex:0 0 220px;
+        @include breakpoint($tablet-up) {
+          flex:0 0 auto;
+        }
+      }
+    }
+  }
+}
+
+.mini-teaser-wrapper {
+  //min-width: 240px;
+  margin-right: $gutter;
+  display: block;
+  .field-image {
+    float:left;
+    display: block;
+    //max-width: 100px;
+    //@include breakpoint($tablet-up) {
+      max-width: 60px;
+    //}
+    //margin-right: $gutter;
+    img {
+      display: block;
+      border-radius: 50%;
+    }
+  }
+  .bird-title{
+    padding: $gutter;
+    float: left;
+    display: block;
+    a {
+      font-size:15px;
+    }
+  }
+}

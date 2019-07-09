@@ -1,0 +1,69 @@
+// BASE FONT
+// =============================================================================
+
+html {
+  @include font-regular;
+  @include font-size($base-font-size,true);
+  letter-spacing: 0.3px;
+  @include breakpoint($mobile) {
+    font-size: 87.5%;
+    line-height: 1.5;
+  }
+  -webkit-font-smoothing: antialiased;
+}
+
+// HEADER STYLES
+// =============================================================================
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $red;
+}
+
+h1 {
+  @include h1;
+  font-size:60px;
+  line-height: 58px;
+}
+h1.page-title {
+  text-align: center;
+  margin:36px auto 56px;
+}
+
+h2 {
+  @include h2;
+  @include font-size(30,true);
+  margin-bottom: $gutter*1.5;
+}
+
+.block-views h2 {
+  color:$black;
+}
+
+h3 {
+  @include h3;
+  @include font-size(22,true);
+  margin-bottom: $gutter*1.5;
+}
+
+h4 {
+  @include h4;
+  @include font-size(18,true);
+  margin: 0;
+}
+
+// TEXT STYLES
+// =============================================================================
+b, em, strong {
+  @include font-regular;
+  @include font-size(16,true);
+}
+
+p {
+  @include font-light;
+  @include font-size(16,true);
+  margin-bottom: $gutter;
+}

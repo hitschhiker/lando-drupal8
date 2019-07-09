@@ -1,0 +1,30 @@
+.node--type-livestream {
+  .content-wrapper {
+    &.top-push {
+      margin-top:140px; // here for the header and the logged in tabs to be vis
+    }
+    article {
+      .videostream-wrapper {
+        padding-top: 0px !important;
+        
+        #video_stream {
+          //max-width: $content-widths;
+          width: 720px;
+          height: 405px;
+          margin: 0 auto;
+          text-align: center;
+          
+          @include breakpoint($mobile) {
+            width: 300px;
+            height: 168px;
+          }
+        }
+        
+        .field-intotext {
+          margin: 0 auto;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

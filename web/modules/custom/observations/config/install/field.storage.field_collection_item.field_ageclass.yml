@@ -1,0 +1,53 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - field_collection
+    - options
+id: field_collection_item.field_ageclass
+field_name: field_ageclass
+entity_type: field_collection_item
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 10
+      label: 'juvenil (1.Jahr)'
+    -
+      value: 15
+      label: 'juvenil / immatur (?)'
+    -
+      value: 20
+      label: 'immatur (2.Jahr)'
+    -
+      value: 22
+      label: 'immatur (3.Jahr)'
+    -
+      value: 25
+      label: 'immatur/ subadult (?)'
+    -
+      value: 30
+      label: 'subadult (4.Jahr)'
+    -
+      value: 35
+      label: 'subadult (5./6.Jahr)'
+    -
+      value: 37
+      label: 'subad / adult (?)'
+    -
+      value: 40
+      label: 'adult (>6.Jahr)'
+    -
+      value: 60
+      label: 'dunkler Kopf'
+    -
+      value: 5
+      label: 'heller Kopf'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

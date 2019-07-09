@@ -1,0 +1,25 @@
+//VIEW Related Articles
+// =============================================================================
+.block-views-blockcontent-blocks-block-3,
+.block-views-blockcontent-blocks-block-12 {
+  margin-top: 0;
+  padding:$gutter*5 0;
+  text-align: center;
+  background-color: $breadcrumbs;
+  @include linear-gradient(180deg, $breadcrumbs  0px, $breadcrumbs  50%, $white  50%, $white  100%);
+   > h2 {
+    @include font-size(30px, true);
+    text-transform: uppercase;
+    color:$black;
+    @include header-rule-after();
+  }
+}
+.node--type-news {
+  .block-views-blockcontent-blocks-block-3 {
+    @include linear-gradient(180deg, $breadcrumbs 0px, $breadcrumbs 50%, $white 50%, $white 100%);
+  }
+}
+
+.block-views-blockcontent-blocks-block-12 {
+  padding:$gutter*2 0;
+}

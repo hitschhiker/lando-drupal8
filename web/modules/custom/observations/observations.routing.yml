@@ -1,0 +1,6 @@
+entity.observation.add:
+  path: 'beobachtung/melden'
+  defaults:
+    _entity_form: observation.add
+  requirements:
+    _permission: 'access content'

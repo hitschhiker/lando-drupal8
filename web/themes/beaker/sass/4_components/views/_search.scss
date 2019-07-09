@@ -1,0 +1,113 @@
+// SEARCH VIEW
+// =============================================================================
+
+.path-search{
+  .block-system-breadcrumb-block{
+    margin-top:  200px;
+  }
+  h2, .search-form, .item-list{
+    max-width: 1200px;
+    margin: 0 auto;
+    @include breakpoint ($desktop){
+      width: 100%;
+    }
+  }
+  h2 {
+    @include breakpoint($desktop){
+      margin-left: 18px;
+    }
+  }
+
+  .search-form{
+    padding: $gutter*3 0 $gutter*3 0;
+    @include breakpoint($desktop){
+      margin-left: 18px;
+    }
+    label{
+      font-size: 24px;
+      line-height: 50px;
+      @include font-bree-bold;
+      @include breakpoint($desktop){
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+    a.search-help-link{
+      font-size: 14px;
+      line-height: 35px;
+    }
+    input.form-search{
+      box-sizing: inherit;
+    }
+    input.button, input.form-search{
+      @include breakpoint($small){
+        min-width: 300px;
+        margin: 5px 0;
+      }
+    }
+  }
+
+  .item-list{
+    ol.search-results{
+      padding: 0;
+      margin: 0;
+      @include breakpoint($desktop){
+        padding: 0 20px;
+      }
+      li{
+        padding: 0;
+        margin: 0;
+        .search-result__snippet-info{
+          p.search-result__info{
+            font-size: 14px;
+            @include font-bree-semibold;
+          }
+        }
+      }
+    }
+  }
+
+  /* -----------  Normal Pager (suggestion) -----------*/
+  .pager{
+    padding-top: 0px;
+    margin-top: 50px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    ul,ol{
+      display: inline-block;
+      margin: 5px 0;
+      padding: 0 15px;
+      height: 100%;
+      vertical-align: middle;
+      li{
+        display: inline-block;
+        width: auto;
+        margin: 5px;
+        border: 1px solid $off-grey;
+        padding: 0 10px;
+        line-height: 25px;
+        height: 30px;
+        @include transition(all 0.5s ease);
+        a{
+          color: $off-grey;
+          font-size: 14px;
+          line-height: 28px;
+        }
+        &:hover{
+          border-color: $red;
+          a{
+            text-decoration: none;
+            color: $red;
+          }
+        }
+      }
+      .pager__item--first a, .pager__item--previous,
+      .pager__item--last a, .pager__item--next a{
+        padding: 0 20px;
+      }
+    }
+  }
+}
+
+

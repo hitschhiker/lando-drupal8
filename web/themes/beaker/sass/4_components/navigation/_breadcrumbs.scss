@@ -1,0 +1,40 @@
+.breadcrumb {
+  max-width: $wide;
+  margin: -$gutter auto 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: $gutter;
+  background-color: transparent;
+  .top-push & {
+    background-color: $breadcrumbs;
+  }
+  ul, ol {
+    li {
+      color:$black;
+      @include font-size(14px,true);
+      &:before {
+        margin:0 $gutter;
+        content:"\203A";
+      }
+      a {
+        color:$red;
+        @include font-size(14px,true);
+        &:hover {
+          color:$black;
+        }
+      }
+      &:last-of-type {
+        a {
+          color: $body-text;
+        }
+      }
+    }
+  }
+}
+
+.block-system-breadcrumb-block {
+  .node--type-bilderblog &, .node--type-news &, .node--type-birds & {
+    display: none !important;
+  }
+}

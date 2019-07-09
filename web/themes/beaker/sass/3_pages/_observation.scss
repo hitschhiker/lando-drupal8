@@ -1,0 +1,105 @@
+.add-observation {
+  .layout-container{
+    margin: 0;
+  }
+  .content-wrapper {
+    margin-top:140px; // here for the header and the logged in tabs to be vis
+    @include breakpoint($mobile){
+      margin-top: 70px;
+    }
+  }
+}
+
+form.node-observation-form{
+  max-width: 700px;
+  margin: 0 auto;
+  @include breakpoint($mobile) {
+    width: 80%;
+  }
+
+  .group-personal-details{
+    width: 100%;
+    padding: 25px;
+    border: 1px solid $grey_2;
+    .fieldset-legend{
+      @include font-size(18px,true);
+      @include font-regular;
+    }
+    input{
+      width: 100%;
+    }
+    label{
+      margin-left: 0;
+    }
+    .form-wrapper{
+      width: 48%;
+      float: left;
+      clear: none;
+      @include breakpoint($mobile)  {
+        width: 100%;
+        &:nth-child(2n-1){
+          margin-right: 0;
+        }
+      }
+      &:nth-child(2n-1){
+        margin-right: 4%;
+      }
+      select{
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
+  .group-observation-details{
+    width: 100%;
+    padding: 25px;
+    border: 1px solid $grey_2;
+    .form-item{
+      width: 100%;
+    }
+
+    input{
+      width: auto;
+      @include breakpoint($mobile) {
+      width: 100%;
+        &.form-time{
+        width: auto;
+        margin: 10px 0;
+
+        }
+      }
+      &.form-radio{
+          width: auto;
+      }
+    }
+    fieldset{
+      label{
+        clear: none;
+        margin-left: 15px;
+        line-height: 36px;
+      }
+    }
+    label{
+      margin-left: 0;
+    }
+  }
+  .form-actions{
+    float: right;
+    width: auto;
+    .button{
+      float: right;
+      @include breakpoint($small) {
+        &#edit-preview{
+          display: none;
+        }
+      }
+      &#edit-submit{
+        background: $dark-brown;
+        &:hover{
+          background: $orange;
+        }
+      }
+      &#edit-preview{ display: none; }
+    }
+  }
+}

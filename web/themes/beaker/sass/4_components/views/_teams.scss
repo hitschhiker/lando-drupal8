@@ -1,0 +1,126 @@
+// TEAMS VIEW
+// =============================================================================
+.block-views-blockcontent-blocks-block-5 {
+  h2 {
+    text-align: center;
+    color: $black;
+    text-transform: uppercase;
+    margin-bottom: -16px;
+    background-color: $breadcrumbs;
+    &:after{
+      content: "";
+      display: block;
+      width: 100px;
+      margin: 15px auto;
+      border: 1px solid $black;
+    }
+  }
+  h3 {
+    width: auto;
+    text-align: center;
+    padding: 30px 0 10px 0;
+    color:$off-grey;
+    font-family: $bree-serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+  .view-content-blocks {
+    &.view-display-id-block_5 {
+      .item-list {
+        background-color:$breadcrumbs;
+        padding: $gutter*2 0;
+        ul {
+          width: 100%;
+          max-width: 100%;
+          display: flex;
+          flex-flow: wrap;
+          align-content: space-between;
+          justify-content: center;
+          list-style-type: none;
+          margin: $gutter*2 auto;
+          @include breakpoint($mobile) {
+            max-width: 768px;
+          }
+          @include breakpoint($small) {
+            max-width: 480px;
+          }
+          @include breakpoint($smaller) {
+            max-width: 320px;
+          }
+          li {
+            width: 23%;
+            min-width: 300px;
+            padding: 0 1%;
+            text-align: center;
+            margin: 0 auto $gutter*2;
+            @include breakpoint($small) {
+              width: 90%;
+              max-width: 320px;
+            }
+            @include breakpoint($small-landscape) { width: 48%; }
+            @media (min-width: 581px) and (max-width: 935px){
+              min-width: 300px;
+            }
+            .team-image {
+              margin: 0 auto $gutter;
+              img {
+                border-radius: 50%;
+                padding: 0;
+              }
+            }
+            .team-info {
+              .position {
+                color: $gold;
+                line-height: 50px;
+                font-size: 16px;
+                @include font-bree-italic;
+              }
+              .title, .company {
+                font-weight: 400;
+                font-family: $bree-serif;
+              }
+              .title {
+                color: $red;
+                font-size: 20px;
+              }
+              .company { font-size: 14px; }
+              .bio {
+                font-weight: 300;
+                margin-top: $gutter;
+                font-size: 14px;
+                line-height: 20px;
+              }
+            }
+            &:nth-of-type(2) { clear: right; }
+          }
+        }
+        &:nth-of-type(2n+2) { background-color: $white; }
+      }
+    }
+    .attachment-after {
+      padding: $gutter*2 0;
+      text-align: center;
+      @include linear-gradient(180deg, $breadcrumbs  0px, $breadcrumbs  50%, $white  50%, $white  100%);
+      .views-field-title {
+        @include h3;
+        color: $red;
+        @include font-bree-italic;
+      }
+      .views-field-field-image{
+        img{ width: auto; }
+      }
+      .views-field-field-bio {
+        margin: auto;
+        text-align: left;
+        max-width: $content-widths;
+        font-weight: 300;
+        margin-top: $gutter;
+        font-size: 14px;
+        line-height: 20px;
+        @include breakpoint($tablet) {
+          padding: 15px;
+        }
+      }
+    }
+  }
+}

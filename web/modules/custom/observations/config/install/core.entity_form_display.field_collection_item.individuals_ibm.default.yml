@@ -1,0 +1,75 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.individuals_ibm.field_ageclass
+    - field.field.field_collection_item.individuals_ibm.field_behaviour
+    - field.field.field_collection_item.individuals_ibm.field_birdname
+    - field.field.field_collection_item.individuals_ibm.field_heading
+    - field.field.field_collection_item.individuals_ibm.field_interaction
+    - field.field.field_collection_item.individuals_ibm.field_interactiontype
+    - field.field.field_collection_item.individuals_ibm.field_left_foot
+    - field.field.field_collection_item.individuals_ibm.field_right_foot
+    - field.field.field_collection_item.individuals_ibm.field_sex
+    - field.field.field_collection_item.individuals_ibm.field_winner
+    - field_collection.field_collection.individuals_ibm
+  module:
+    - workbench_moderation
+id: field_collection_item.individuals_ibm.default
+targetEntityType: field_collection_item
+bundle: individuals_ibm
+mode: default
+content:
+  field_ageclass:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_behaviour:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_birdname:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_heading:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_interaction:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_interactiontype:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_left_foot:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_right_foot:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_sex:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_winner:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+hidden: {  }

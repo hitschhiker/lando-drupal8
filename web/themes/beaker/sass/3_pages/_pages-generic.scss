@@ -1,0 +1,30 @@
+// ALL PAGEs STYLES
+// =============================================================================
+.path-node {
+  .page-wrapper {
+    overflow: hidden;
+    .content-wrapper {
+      main {
+        clear: both;
+        .region-content-main {
+          article {
+            .default-wrapper {
+              .field-body {
+                max-width: $content-widths;
+                margin: 0 auto $gutter;
+                img {
+                  margin: $gutter*2 auto;
+                  text-align: center;
+                  @include breakpoint($small-up) {
+                    max-width: 65%;
+                  }
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

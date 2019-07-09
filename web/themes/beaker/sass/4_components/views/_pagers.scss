@@ -1,0 +1,101 @@
+// PAGERS
+// =============================================================================
+.pager {
+  &.js-pager__items {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto 0;
+    background: $white;
+    .pager__item {
+      padding: 0;
+      a {
+        margin: auto;
+        position: relative;
+        display: block;
+        background-image: url("../images/icons/loadmore.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 40px;
+        width: 40px;
+        text-indent: -99999px;
+        top:-20px;
+
+      }
+    }
+    .view-taxonomy-term & {
+      margin: 0 auto $gutter*2;
+    }
+  }
+  &.pager--load-more {
+    display: block;
+    position: relative;
+    height: auto;
+    padding: 0 0 $gutter*2;
+    .pager__items {
+      width: 40px;
+      padding: 0;
+      margin: auto;
+      .pager__item {
+        padding: 0;
+        a {
+          position: relative;
+          display: block;
+          background-image: url("../images/icons/loadmore.png");
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          height: 40px;
+          width: 40px;
+          text-indent: -99999px;
+          top:-20px;
+        }
+      }
+    }
+  }
+}
+
+
+/* -----------  Normal Pager (suggestion) -----------*/
+// .bird-listing{
+//   .pager{
+//     padding-top: 0px;
+//     margin-top: 50px;
+//     display: inline-block;
+//     text-align: center;
+//     width: 100%;
+//     ul,ol{
+//       display: inline-block;
+//       margin: 5px 0;
+//       padding: 0 15px;
+//       height: 100%;
+//       vertical-align: middle;
+//       li{
+//         display: inline-block;
+//         width: auto;
+//         margin: 5px;
+//         border: 1px solid $off-grey;
+//         padding: 0 10px;
+//         line-height: 25px;
+//         height: 30px;
+//         @include transition(all 0.5s ease);
+//         a{
+//           color: $off-grey;
+//           font-size: 14px;
+//           line-height: 28px;
+//         }
+//         &:hover{
+//           border-color: $red;
+//           a{
+//             text-decoration: none;
+//             color: $red;
+//           }
+//         }
+//       }
+//       .pager__item--first a, .pager__item--previous,
+//       .pager__item--last a, .pager__item--next a{
+//         padding: 0 20px;
+//       }
+//     }
+//   }
+// }

@@ -1,0 +1,9 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - observations
+id: observation.add
+label: Melden
+targetEntityType: observation
+cache: true

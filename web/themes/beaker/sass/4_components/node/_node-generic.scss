@@ -1,0 +1,14 @@
+//Very Generic Node Styling
+article.node {
+  //padding: $gutter*2;
+  .field-related {
+  //  .field--name-field-bird {
+      .field__label {
+        text-transform: uppercase;
+        margin: auto;
+        text-align: center;
+      }
+    //}
+  }
+
+}

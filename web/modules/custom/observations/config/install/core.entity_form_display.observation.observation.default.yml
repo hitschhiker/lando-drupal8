@@ -1,0 +1,142 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - image.style.thumbnail
+  module:
+    - country
+    - datetime
+    - field_collection
+    - geolocation
+    - image
+    - observations
+id: observation.observation.default
+targetEntityType: observation
+bundle: observation
+mode: default
+content:
+  address:
+    type: string_textfield
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  country:
+    type: country_default
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+  date:
+    type: datetime_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  distance:
+    type: number
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  email:
+    type: email_default
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  firstname:
+    type: string_textfield
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  individuals_ibm:
+    type: field_collection_embed
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+  location:
+    type: string_textfield
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  number:
+    type: number
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  obs_image:
+    type: image_image
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  observation_marks:
+    type: field_collection_embed
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+  phone:
+    type: string_textfield
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  plz:
+    type: string_textfield
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  position:
+    type: geolocation_googlegeocoder
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+  quality:
+    type: options_select
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+  remarks:
+    type: string_textarea
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  remarks_admin:
+    type: string_textarea
+    weight: 22
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: options_select
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+  time:
+    type: string_textfield
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

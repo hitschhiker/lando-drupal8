@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_list
+    - field_collection.field_collection.observation_marks
+  module:
+    - options
+id: field_collection_item.observation_marks.field_list
+field_name: field_list
+entity_type: field_collection_item
+bundle: observation_marks
+label: Which characteristics did you observe for this individual?
+description: ''
+required: true
+translatable: false
+default_value_callback: ''
+settings: {  }
+field_type: list_integer
+

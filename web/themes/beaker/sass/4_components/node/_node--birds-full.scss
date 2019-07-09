@@ -1,0 +1,171 @@
+body.node--type-birds {
+  .content-wrapper {
+    margin-top:140px; // here for the header and the logged in tabs to be vis
+    main {
+      clear: both;
+      article.node--type-birds {
+        //margin-top: 308px;
+        background: linear-gradient(to bottom, $white 0%,$white 50%,$white 50%,$breadcrumbs 50%, $breadcrumbs 100%);
+        h2 {
+          color: #2b2521;
+          margin-bottom: -16px;
+          margin-top: 46px;
+          text-align: center;
+          text-transform: uppercase;
+          font-family: "bree-serif",Arial,"Helvetica Neue",Helvetica,sans-serif;
+          font-size: 1.875rem;
+          background-color: #f7f5f1;
+        }
+
+        h2::after {
+          border: 0.5px solid #2b2521;
+          content: "";
+          display: block;
+          margin: 40px auto;
+          width: 100px;
+        }
+
+        .map {
+          position:relative;
+          padding-bottom: 30%;
+          margin-top: 30px;
+          height: 350px;
+          overflow:hidden;
+          @include breakpoint($tablet-up) {
+            height: 0;
+          }
+        }
+        .map-iframe {
+          position:absolute;
+          top:0;
+          left: 0;
+          width: 100%;
+          height:100%
+
+        }
+        .default-wrapper {
+          //position: relative;
+          //top:-300px;
+          display: flex;
+          flex-wrap: wrap;
+          margin: auto;
+          padding: 0;
+          @include breakpoint($tablet-up) {
+            flex-wrap: nowrap;
+          }
+          .left, .right {
+            float: left;
+            flex-grow: 0;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+          }
+          .left {
+            .background-image {
+              width: 100%;
+              height: 100%;
+              min-height: calc(100vw);
+              background-position: center top;
+            }
+            @include breakpoint($tablet-up) {
+              width: 70%;
+              .background-image {
+                min-height: 540px;
+                 //730px
+                background-size: cover;
+              }
+            }
+            @include breakpoint($almost-wide) {
+              width: 70%;
+              .background-image {
+                min-height: 480px;
+                 //730px
+                background-size: cover;
+              }
+            }
+            @include breakpoint($small) {
+              .background-image {
+                background-size: contain;
+                min-height: calc(100vw);
+              }
+            }
+          }
+          .right {
+            @include breakpoint($tablet-up) {
+              width: 30%;
+            }
+            text-align: left;
+            color: $black;
+            background-color: $white;
+            padding:0;
+            border: 1px solid $grey-dark;
+            border-left:0;
+            h3 {
+              background-color: $light-brown;
+              color:$white;
+              text-transform: uppercase;
+              line-height: 20px;
+              padding: 14px $gutter*2 16px;
+              font-size: 22px;
+              margin-bottom: 16px;
+            }
+            .sub-wrap {
+              padding: 0 $gutter*2 20px;
+              margin: 0;
+              li {
+                list-style-type: none;
+                margin-bottom: 0;
+                p {
+                  margin-bottom:10px;
+                }
+              }
+              &.portrait {
+                padding: 0 $gutter*2 10px;
+              }
+            }
+            .on-the-move, .portrait {
+              color: $black;
+              a {
+                color:$red;
+                transition: all 1s ease;
+                @include font-bold;
+                &:hover {
+                  color:$black;
+                  &:after {
+                    margin-left: $gutter;
+                  }
+                }
+              }
+            }
+            .sponsor-ref {
+              img {
+                // TODO: Get the img attributes to work so editor can set size.
+                // height: inherit;
+                // width: inherit;
+              }
+            }
+            .field--name-field-sponsor-text {
+              img {
+                // Disabling to allow editors to set image.
+                // max-width: 70%;
+              }
+            }
+            // removed in favour of a free texarea
+            // .field--name-field-sponsors {
+            //   display: flex;
+            //   justify-content: center;
+            //   flex-wrap: wrap;
+            //   .field__item {
+            //     text-align: center;
+            //     align-items: center;
+            //     min-width: 50%;
+            //     margin: 0 auto $gutter;
+            //     flex: 0 0 120px;
+            //   }
+            // }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,147 @@
+.path-taxonomy {
+  .page-wrapper {
+    overflow: hidden;
+    .content-wrapper {
+      margin-top:0px;
+      &.top-push {
+        margin-top:140px; // here for the header and the logged in tabs to be vis
+      }
+      .content-top {
+        margin-bottom: $gutter*3;
+        .view-display-id-taxo_heading_block {
+          .views-field-field-icon-image {
+            text-align: center;
+            margin:0 auto $gutter;
+            max-width: 80px;
+          }
+          h1.taxo-title {
+            text-align: center;
+            margin:auto;
+            color:$black;
+            text-transform: uppercase;
+            @include font-size(48,false);
+            line-height: 50px;
+          }
+          .taxo-subtitle {
+            text-align: center;
+            margin:auto;
+            color: $red;
+            @include font-size(30px,false);
+            line-height: 40px;
+            @include font-bree-italic;
+          }
+          .field-content{ margin-top: 10px; }
+        }
+
+      }
+      main {
+        //background-color: $breadcrumbs;
+        clear: both;
+      }
+    }
+    .view-taxonomy-term {
+      clear: both;
+      display: block;
+      .attachment-before {
+        position: relative;
+        top: -200px;
+        clear: both;
+        display: block;
+        margin-bottom: -$gutter*8;
+        overflow: hidden;
+        }
+      }
+      .pager {
+        &.pager--load-more, &.js-pager__items {
+          margin: 0 auto 0;
+        }
+      }
+      //Archives
+      .attachment-after {
+        padding-bottom: $gutter*2;
+        background-color: $white;
+        .view-taxonomy-term {
+          padding-top: $gutter;
+          background-color: $white;
+          h3 {
+            margin: auto;
+            text-align: center;
+            @include font-bree-regular;
+            @include font-size(15px, true);
+            color:$gold;
+            text-transform: uppercase;
+          }
+          //List in views archives component
+        }
+      }
+      .feed-icons {
+        display: none;
+      }
+  }
+}
+
+.tax-intro {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 0;
+  .tax-item-left, .tax-item-right {
+    float: left;
+    flex-grow: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    @include breakpoint($desktop-up) {
+      width: 50%;
+      max-height: 440px;
+    }
+    @include breakpoint($almost-wide) {
+      width: 50%;
+      max-height: 420px;
+    }
+    @include breakpoint($wide) {
+      width: 50%;
+    }
+  }
+  .tax-item-left {
+    line-height: 0;
+    img {
+    // TODO: Make this a background image that covers.
+      width: 100%;
+      height: auto;
+      @include breakpoint($tablet-up) {
+      }
+    }
+  }
+  .tax-item-right {
+    text-align: center;
+    color: $white;
+    background-color: $light-brown;
+    padding: 80px 5%;
+    .created-date {
+      margin-bottom: $gutter;
+      color:$grey_2;
+      font-size: 14px;
+      @include font-light;
+    }
+    h2.tax-first-header a {
+      @include font-bree-semibold;
+      color: $orange-light;
+      @include breakpoint($tablet) {
+        @include font-size(32px, true);
+      }
+      @include font-size(48px, true);
+    }
+    p {
+      @include font-size(16, true);
+      margin-bottom: $gutter;
+    }
+    .button {
+      @include button($color:$white,$bg-color:$orange, $font-size:16px, $padding:8px 24px);
+    }
+  }
+}
+
+
+
+// Tax List Style is its own component

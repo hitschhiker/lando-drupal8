@@ -1,0 +1,21 @@
+embed,
+object,
+video,
+img {
+  max-width: 100%;
+  //width: 100%; /*firefox image width fix*/
+  // width: auto;
+  // height: auto;
+}
+
+a:hover, a:focus {
+  img {
+    opacity: 0.9;
+  }
+}
+
+// .paragraph {
+//   img {
+//     width: 100%;
+//   }
+// }

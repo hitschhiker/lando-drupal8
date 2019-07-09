@@ -1,0 +1,26 @@
+// IMAGE ROW PARAGRAPH TYPE
+// =============================================================================
+
+.paragraph { //paragraph--view-mode--default
+  &.paragraph--type--image-row {
+    background: linear-gradient(to bottom, white 0%,white 50%,#ffffff 50%,$breadcrumbs 50%, $breadcrumbs 100%);
+    margin: 0 auto 0;
+    padding: $gutter*2 0;
+    .image-row-wrapper {
+      .field--name-field-image-gallery {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .field__item {
+          line-height: 0;
+          height: auto;
+          flex:0 0 50%;
+          //margin: $gutter;
+          @include breakpoint($small-up) {
+            flex:0 0 25%;
+          }
+        }
+      }
+    }
+  }
+}

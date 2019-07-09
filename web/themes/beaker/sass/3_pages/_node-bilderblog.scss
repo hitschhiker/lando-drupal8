@@ -1,0 +1,106 @@
+.node--type-bilderblog {
+  .content-wrapper {
+    &.top-push {
+      margin-top:140px; // here for the header and the logged in tabs to be vis
+    }
+    article {
+      .default-wrapper {
+        padding-top: $gutter*3;
+        .col-1 {
+          max-width: $content-widths;
+          margin: 0 auto $gutter*2;
+          @include breakpoint($tablet-up) {
+            float:left;
+            max-width: 48%;
+          }
+        }
+        .col-2 {
+          max-width: $content-widths;
+          margin: 0 auto $gutter*2;
+          display: inline-block;
+          clear: right;
+          height: auto;
+          .created-time {
+            color:$grey_1;
+            text-align: center;
+            @include font-size(16,true);
+          }
+          h1 {
+            font-size: 48px;
+            line-height: 60px;
+            margin: 0 auto $gutter*2;
+            text-align: center;
+            @include breakpoint($small) {
+              font-size: 44px;
+            }
+          }
+          .field-body {
+            img {
+              width: 100%;
+              margin: $gutter*2 auto;
+              text-align: center;
+              @include breakpoint($small-up) {
+                max-width: 65%;
+              }
+              display: block;
+            }
+          }
+          @include breakpoint($tablet-up) {
+            float:left;
+            max-width: 48%;
+            margin-left: $gutter*2;
+            h1 {
+              text-align: left;
+            }
+            .created-time {
+              text-align: left;
+              margin-bottom: $gutter/2;
+            }
+          }
+        }
+        //end col2
+        .field-images {
+          clear: both;
+          float: none;
+          width: 100%;
+          display: block;
+          background: linear-gradient(to bottom, white 0%,white 50%,#ffffff 50%,$breadcrumbs 50%, $breadcrumbs 100%);
+          margin: 0 auto 0;
+          padding: $gutter*2;
+          .field--name-field-images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            .field__item {
+              line-height: 0;
+              height: auto;
+              flex:0 0 50%;
+              //margin: $gutter;
+              @include breakpoint($small-up) {
+                flex:0 0 25%;
+              }
+            }
+          }
+        }
+        .field-related, .field-tags {
+          display: block;
+          clear: both;
+        }
+        
+        .field-video {
+          display: block;
+          clear: both;
+          margin: 0 auto 0;
+          padding-top: $gutter*2;
+          padding-bottom: $gutter*2;
+        }
+      }
+    }
+  }
+  .field--type-entity-reference.field--name-field-bird .field__label {
+    margin-top: $gutter*2;
+    &:before {
+      display: none;
+    }
+  }
+}

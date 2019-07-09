@@ -1,0 +1,203 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.observation.edit
+    - image.style.thumbnail
+  module:
+    - country
+    - datetime
+    - field_collection
+    - field_group
+    - geolocation
+    - image
+    - observations
+third_party_settings:
+  field_group:
+    group_beobachtung:
+      children:
+        - date
+        - time
+        - distance
+        - quality
+        - position
+        - obs_image
+        - number
+        - remarks
+      parent_name: ''
+      weight: 0
+      label: Beobachtung
+      format_type: tab
+      format_settings:
+        label: Beobachtung
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: false
+    group_beobachter:
+      children:
+        - firstname
+        - name
+        - address
+        - plz
+        - location
+        - country
+        - email
+        - phone
+      parent_name: ''
+      weight: 9
+      label: Beobachter
+      format_type: tab
+      format_settings:
+        label: Beobachter
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+    group_individuen:
+      children:
+        - observation_marks
+        - individuals_ibm
+      parent_name: ''
+      weight: 1
+      label: Individuen
+      format_type: tab
+      format_settings:
+        label: Individuen
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+id: observation.observation.edit
+targetEntityType: observation
+bundle: observation
+mode: edit
+content:
+  address:
+    type: string_textfield
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  country:
+    type: country_default
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+  date:
+    type: datetime_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  distance:
+    type: number
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  email:
+    type: email_default
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  firstname:
+    type: string_textfield
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  individuals_ibm:
+    type: field_collection_embed
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+  location:
+    type: string_textfield
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  number:
+    type: number
+    weight: 7
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  obs_image:
+    type: image_image
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  observation_marks:
+    type: field_collection_embed
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+  phone:
+    type: string_textfield
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  plz:
+    type: string_textfield
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  position:
+    type: geolocation_googlegeocoder
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  quality:
+    type: options_select
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+  remarks:
+    type: string_textarea
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  remarks_admin:
+    type: string_textarea
+    weight: 12
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: options_select
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+  time:
+    type: string_textfield
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,91 @@
+.path-contact {
+  .page-title{
+    text-align: center;
+    margin: 25px 0;
+    @include breakpoint($small) {
+      h1{
+        font-size: 35px;
+      }
+    }
+  }
+  .content-wrapper {
+    margin-top:140px; // here for the header and the logged in tabs to be vis
+  }
+  .contact-form{
+      max-width: 700px;
+      margin: 0 auto;
+      @include breakpoint($mobile) {
+          max-width: 80%;
+      }
+    .form-item.form-item-name, .form-item.js-form-type-email {
+      display: block;
+      float: left;
+      width: 47%;
+      margin-right: 6%;
+
+    }
+    .form-wrapper{
+      float: left;
+      width: 47%;
+      clear: none;
+
+      &.field--name-message{
+        width: 100%;
+      }
+    }
+    .form-actions{
+      height: 125px;
+      width: 100%;
+      float: right;
+      .button{
+        float: right;
+        margin-top: 10px;
+        clear: none;
+        @include breakpoint($small) {
+          &#edit-preview{
+            margin-right: 0px;
+            clear: both;
+          }
+        }
+        &#edit-submit{
+          background: $dark-brown;
+          &:hover{
+            background: $orange;
+          }
+        }
+      }
+    }
+    input{
+      width: 100%;
+      &.button{
+        width: auto;
+      }
+      &#edit-preview{
+        display: none;
+      }
+    }
+
+    .field--name-langcode{
+      height: 125px;
+
+    }
+  }
+}
+
+@include breakpoint($mobile) {
+  .path-contact {
+    .content-wrapper {
+      margin-top: 70px; // here for the header and the logged in tabs to be vis
+    }
+    .contact-form{
+      .form-item.form-item-name, .form-item.js-form-type-email {
+        width: 100%;
+        margin-right: 0;
+
+      }
+      .form-wrapper{
+        width: 100%;
+      }
+    }
+  }
+}

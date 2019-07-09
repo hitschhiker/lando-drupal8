@@ -1,0 +1,80 @@
+// SIGN-UP
+// =============================================================================
+
+form#subForm{
+  input{
+    width: 70%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 50px;
+    float: left;
+    clear: left;
+    border: none;
+    color: $grey_1;
+    padding-left: 15px;
+    &:focus{
+      outline: none;
+    }
+  }
+  button{
+    float: left;
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: $orange;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 25px;
+    @include font-bree-regular;
+    @include transition(1s);
+    &:hover{
+      background-color: $dark-brown;
+    }
+  }
+}
+
+
+/*----------------- -------------*/
+.birdNodeForm{
+  width: 100%;
+  height: 200px;
+  padding: $gutter*3 0;
+  background-color: $brown-grey;
+  @include breakpoint($mobile){
+    padding: $gutter*2;
+  }
+  @include breakpoint($small){
+    height: 280px;
+  }
+  form#subForm{
+    max-width: 700px;
+    margin: 0 auto;
+    p{
+      color: $white;
+      font-weight: 400;
+      text-align: center;
+      strong{ @include font-bree-regular; }
+    }
+  }
+}
+
+
+
+// RESPONSIVE DESIGN
+// =============================================================================
+
+@include breakpoint($small) {
+  form#subForm {
+    input{
+      width: 100%;
+      border-radius: 5px;
+    }
+    button{
+      width: 100%;
+      margin-top: 5px;
+      border-radius: 5px;
+    }
+  }
+}

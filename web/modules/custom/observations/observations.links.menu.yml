@@ -1,0 +1,26 @@
+# Observation menu items definition
+entity.observation.collection:
+  title: 'Observation list'
+  route_name: entity.observation.collection
+  description: 'List Observation entities'
+  parent: system.admin_structure
+  weight: 100
+
+observation.admin.structure.settings:
+  title: Observation settings
+  description: 'Configure Observation entities'
+  route_name: observation.settings
+  parent: system.admin_structure
+# Observation menu items definition
+entity.observation.collection:
+  title: 'Observation list'
+  route_name: entity.observation.collection
+  description: 'List Observation entities'
+  parent: system.admin_structure
+  weight: 100
+
+observation.admin.structure.settings:
+  title: Observation settings
+  description: 'Configure Observation entities'
+  route_name: observation.settings
+  parent: system.admin_structure

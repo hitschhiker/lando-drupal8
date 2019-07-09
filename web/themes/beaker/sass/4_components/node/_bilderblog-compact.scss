@@ -1,0 +1,102 @@
+// COMPACT Bilderblog - mainly seen on the bird node, with news compact.
+article.node--type-bilderblog.node--view-mode-compact {
+  .default-wrapper {
+    padding-top: $gutter;
+    .col-1 {
+      max-width: $content-widths;
+      margin: 0 auto $gutter*2;
+      @include breakpoint($tablet-up) {
+        float:left;
+        max-width: 48%;
+      }
+    }
+    .col-2 {
+      max-width: $content-widths;
+      margin: 0 auto $gutter*2;
+      display: inline-block;
+      clear: right;
+      height: auto;
+      .created-time {
+        color:$grey_1;
+        text-align: center;
+        @include font-size(16,true);
+      }
+      h1 {
+        font-size: 48px;
+        line-height: 60px;
+        margin: 0 auto $gutter*2;
+        text-align: center;
+        @include breakpoint($small) {
+          font-size: 44px;
+        }
+      }
+      .field-body {
+        img {
+          margin: $gutter*2 auto;
+          text-align: center;
+          @include breakpoint($small-up) {
+            max-width: 65%;
+          }
+          display: block;
+        }
+      }
+      @include breakpoint($tablet-up) {
+        float:left;
+        max-width: 48%;
+        margin-left: $gutter*2;
+        h1 {
+          text-align: left;
+        }
+        .created-time {
+          text-align: left;
+          margin-bottom: $gutter/2;
+        }
+      }
+    }
+    //end col2
+    .field-images {
+      clear: both;
+      float: none;
+      width: 100%;
+      display: block;
+      background: linear-gradient(to top, white 0%,white 50%,#ffffff 50%,$breadcrumbs 50%, $breadcrumbs 100%);
+      margin: 0 auto 0;
+      padding: $gutter*2;
+      .field--name-field-images {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .field__item {
+          line-height: 0;
+          height: auto;
+          flex:0 0 50%;
+          //margin: $gutter;
+          @include breakpoint($small-up) {
+            flex:0 0 25%;
+          }
+        }
+      }
+    }
+    .field-related, .field-tags {
+      display: block;
+      clear: both;
+    }
+  }
+.field--type-entity-reference.field--name-field-bird .field__label {
+    margin-top: $gutter*2;
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.article.node--type-bilderblog.node--view-mode-full {
+  .col-1 .field--name-field-image {
+    img {
+      // This i shere because it is no longer in the reset or media scss
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

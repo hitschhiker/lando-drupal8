@@ -1,0 +1,21 @@
+{#
+/**
+ * @file field--observation-marks.html.twig
+ *
+ * This template is used when viewing Observation pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_observation()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% for item in items %}
+  <h3>Individual {{ loop.index }}</h3>
+  {{ item.content }}
+{% endfor %}

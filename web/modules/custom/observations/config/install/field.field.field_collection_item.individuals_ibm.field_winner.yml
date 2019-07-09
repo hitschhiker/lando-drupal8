@@ -1,0 +1,20 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_winner
+    - field_collection.field_collection.individuals_ibm
+  module:
+    - options
+id: field_collection_item.individuals_ibm.field_winner
+field_name: field_winner
+entity_type: field_collection_item
+bundle: individuals_ibm
+label: Gewinner
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

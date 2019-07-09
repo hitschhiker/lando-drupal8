@@ -1,0 +1,590 @@
+// HOMEPAGE TEASERS VIEWS
+// =============================================================================
+
+.path-frontpage {
+  .banner-region {
+    min-height: 200px;
+    @include breakpoint($tablet-up) {
+      height: auto;
+      max-height: 1024px;
+    }
+    @include breakpoint($tablet-less-than) {
+      &:after {
+        background-image: none;
+        display: none;
+      }
+    }
+    .view-display-id-block_3 {
+      .view-header {
+        max-width: 56%;
+        margin:6% 0 2% 4%;
+        z-index: 5;
+        position: relative;
+        h1 {
+          @include font-size(36,false);
+          line-height: 36px;
+          color:$black;
+          span { color: $red;}
+          text-transform:none;
+        }
+        @include breakpoint ($tablet-less-than) {
+          max-width: 56%;
+          text-align: center;
+          margin:54% auto 0;
+          h1 {
+            @include font-size(42,false);
+            line-height: 42px;
+          }
+        }
+        @include breakpoint ($small) {
+          max-width: 92%;
+          margin:62% auto 0;
+        }
+        @include  breakpoint($tablet-up) {
+          max-width: 550px;
+          margin:12% 0 0% 4%;
+          h1 {
+            @include font-size(40,false);
+            line-height: 44px;
+          }
+        }
+        @include  breakpoint($almost-wide) {
+          margin:10% 0 0 4%;
+        }
+        @include  breakpoint($wide) {
+          margin:8% 0 0 12%;
+          h1 {
+            @include font-size(72,false);
+            line-height: 76px;
+          }
+        }
+      }
+      > .view-content {
+        position: relative;
+        z-index: 5;
+        margin:$gutter*2 0 $gutter*2 2%;
+        @include breakpoint($tablet-up) { //768 <
+          margin:$gutter/4 0 $gutter 2%;
+        }
+        @include  breakpoint($wide) {
+          margin:$gutter*2 0 $gutter*2 12%;
+        }
+        @include breakpoint ($tablet-less-than) { //767 >
+          margin:$gutter auto $gutter*2 auto;
+          max-width: 400px;
+        }
+        @include breakpoint($small) { // 480 >
+          margin:$gutter*2 auto $gutter*2 auto;
+          max-width: 100%;
+        }
+        @include breakpoint($smaller) { //320 >
+          margin:$gutter*2 auto $gutter*2 auto;
+        }
+        .banner-list {
+          ul {
+            @include  breakpoint($tablet-up) {
+              margin-top: 0;
+            }
+            li.banner-item {
+              list-style: none;
+              width: auto;
+              border-bottom: 1px solid $gold;
+              padding: $gutter/2 0;
+              margin: 0;
+              max-width: 65%;
+              min-width: 320px;
+              &:before{
+                @include homepage-arrows;
+                @include  breakpoint($small) {
+                  display: none;
+                }
+              }
+              @include  breakpoint($mobile) {
+                max-width: 55%;
+                min-width: 400px;
+              }
+              @include  breakpoint($small) {
+                max-width: 94%;
+                min-width: 300px;
+              }
+              @include  breakpoint($tablet-up) {
+                max-width: 45%;
+                min-width: 512px;
+              }
+              .views-field-field-link-title, .views-field-field-link-subtitle {
+                display: inline-block;
+                @include  breakpoint($small) {
+                  display: block;
+                  text-align: center;
+                }
+              }
+              .views-field-field-link-title {
+                margin-right: $gutter;
+                a {
+                  @include font-bree-regular;
+                  font-size:16px;
+                  @include  breakpoint($desktop-up) {
+                    font-size:20px;
+                  }
+                }
+              }
+              .views-field-field-link-subtitle {
+                @include font-regular;
+                font-size:15px;
+                @include  breakpoint($desktop-up) {
+                  font-size:18px;
+                }
+              }
+              &:last-child {
+                border:none;
+              }
+              &:hover {
+                &:before {
+                  background-position: 8px 2px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .view-footer {
+        .view-display-id-embed_1 {
+          position: absolute;
+          top: 0;
+          z-index: 1;
+          display: block;
+          width: 100%;
+          ul.owl-carousel {
+            margin:0;
+            padding:0;
+            max-width: 1920px;
+            width: 100%;
+            li {
+              width: 100%;
+              display: block;
+            }
+            &:after {
+              background-image: url('../images/White_Mountain_Header.png');
+              background-position: center;
+              background-size: contain;
+              background-repeat: repeat-x;
+              content: "";
+              display: block;
+              height: 219px;
+              width:100%;
+              position: absolute;
+              bottom: -129px;
+              left: 0;
+              z-index: 2;
+              @include breakpoint($mobile) {
+                bottom:-92px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+// FACTS and FIGURES
+  .content-wrapper {
+    z-index: 2;
+    position: relative;
+    margin-top:0;
+    @include breakpoint($desktop-up) {
+      margin-top:$gutter;
+    }
+    #block-bartgeier {
+      .icon-image {
+        margin: 0 auto $gutter;
+        text-align: center;
+        max-width: 50px;
+      }
+      .vulture-numbers {
+        @include breakpoint($mobile) {
+          margin-top: 60px;
+        }
+        margin-bottom: $gutter*5;
+        h1 {
+          color:$black;
+          text-align: center;
+          @include font-size(48,false);
+          line-height: 40px;
+          text-transform: uppercase;
+          margin-bottom: $gutter;
+        }
+        h3 {
+          text-align: center;
+          @include font-size(30,false);
+          line-height: 40px;
+          text-transform: none;
+          @include font-bree-italic;
+        }
+        .animated-numbers {
+          max-width: 1180px;
+          margin: 56px auto $gutter*2;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          .inifite-num {
+            flex:0 0 100%;
+            padding:$gutter;
+            text-align: center;
+            @include font-regular;
+            @include font-size(18,false);
+            border-right: 2px solid $grey;
+            height: 150px;
+            @include breakpoint($tablet) {
+              flex:0 0 40%;
+            }
+            @include breakpoint($small) {
+              flex:0 0 100%;
+              border: none;
+            }
+            @include breakpoint($mobile) {
+              border: none;
+              height: 120px;
+            }
+            @include breakpoint($tablet-up) {
+              flex:0 0 25%;
+              &:nth-of-type(2n+2) {
+                border: none;
+              }
+            }
+            span {
+              display: inline-block;
+              @include font-bree-semibold;
+              @include font-size(77,false);
+              font-weight: 600;
+              line-height: 77px;
+              color:$red;
+              margin-bottom: $gutter*2;
+              @include breakpoint($tablet) {
+                margin-bottom: $gutter;
+                @include font-size(44,false);
+                line-height: 44px;
+              }
+              @include breakpoint($small) {
+                margin-bottom: $gutter/4;
+              }
+            }
+            &:nth-of-type(2n+2) {
+              span {
+                color:$orange;
+              }
+            }
+            &:last-child {
+              border-right: none;
+            }
+            p {
+              margin: auto;
+              text-align: center;
+              max-width: 228px;
+              font-size: 15px;
+              font-weight: 400;
+              @include breakpoint($tablet) {
+                font-size: 14px;
+              }
+            }
+          }
+          .inifite-num:nth-child(3) {
+            z-index: 100;
+            position: relative;
+            &:after{
+              content: "";
+              border-left: 2px solid $grey;
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: block;
+              height: 450px;
+              @include breakpoint($mobile) {
+                border: none;
+              }
+              @media (min-width: 769px) and (max-width: 934px) {
+                height: 315px;
+              }
+              @media (min-width: 935px) and (max-width: 1199px) {
+                height: 360px;
+              }
+            }
+          }
+          .inifite-num:nth-child(2) {
+            z-index: 100;
+            position: relative;
+            &:after{
+              content: "";
+              border-left: 2px solid $grey;
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: block;
+              height: 402px;
+              @include breakpoint($mobile) {
+                //height: 315px;
+              }
+              @include breakpoint($tablet-up) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .homepage { // Teasers
+    position: relative;
+    &.view-display-id-hp_second_after_attachment .cta-strip { display: none; }
+    .view-content {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      //this stops the block collapsing, and giving it the content's height
+    }
+    article {
+      position: relative;
+      clear: both;
+      display: inline-block;
+      height: auto;
+      width: 100%;
+      height: calc(51vw);
+      max-height: 740px;
+      min-height: 320px;
+      margin-bottom: 70px;
+      @include breakpoint($tablet-up) {
+        min-height: 100%;
+        margin-bottom: 70px;
+      }
+      @include breakpoint($almost-wide) {
+        //margin-bottom: 100px;
+      }
+      @media screen and (max-height: 320px) {
+        min-height: 320px;
+      }
+      line-height: 0;
+      .teaser-bg {
+        display: block;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        max-height: 640px;
+        overflow: hidden;
+        height: calc(44vw);
+        min-height: 100%;
+        &:hover, &:focus {
+          img {
+            opacity: 0.90;
+          }
+        }
+        img:hover, img:focus {
+          opacity: 0.90;
+        }
+        @include breakpoint($tablet-up) {
+          min-height: 100%;
+        }
+      }
+      .teaser-inner {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 640px;
+        min-height: 100%;
+        z-index: 5;
+        padding: 0;
+        @include breakpoint($tablet-up) {
+          min-height: 100%;
+        }
+        @media screen and (max-height: 320px) {
+          min-height: 320px;
+        }
+        @include background-image(linear-gradient(transparent, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 80%));
+        .teaser-content {
+          display: block;
+          max-height: 640px;
+          height: calc(24vw);
+          padding:5% 5% 100px;
+          width: 100%;
+          @include breakpoint($tablet) {
+            padding:1% 5% 100px;
+          }
+          @include breakpoint($almost-wide) {
+            padding:2% 5% 100px;
+          }
+          @include breakpoint($wide) {
+            padding:7.5% 5% 100px;
+          }
+          .title-icon, .teaser-titles, .teaser-text,.cta-buttons {
+            margin: $gutter auto;
+            text-align: center;
+            display: block;
+          }
+          .title-icon {
+            max-width: 80px;
+            margin-top: 75px;
+            @include breakpoint($small) {
+              max-width: 60px;
+            }
+            @media screen and (max-height: 320px) {
+              max-width: 40px;
+              margin:$gutter/2 auto 0;
+            }
+          }
+          .teaser-titles {
+            a {
+              span {
+                transition: 0.3s all ease;
+                @include font-bree-bold;
+                @include font-size(48, false);
+                line-height: 40px;
+                color:$white;
+                text-shadow: 0px 1px 4px $black;
+                text-transform: uppercase;
+                @include breakpoint($small) {
+                  @include font-size(42, false);
+                  line-height: 46px;
+                }
+                @media screen and (max-height: 320px) {
+                  line-height: 32px;
+                }
+                &:hover {
+                  color: $orange;
+                }
+              }
+            }
+            @media screen and (max-height: 320px) {
+              h3 {
+                margin:0 auto 0;
+              }
+            }
+          }
+          .teaser-text {
+            margin-bottom: $gutter;
+            .field--name-field-description {
+              margin: auto;
+              max-width: $content-widths;
+              color: $white;
+              text-shadow: 0px 1px 4px $black;
+              @include font-regular;
+              @include font-size(18);
+              line-height: 28px;
+              @include breakpoint($tablet) {
+                display: none;
+                @include font-size(18, false);
+                line-height: 26px;
+              }
+            }
+          }
+          .cta-buttons {
+            @include button();
+          }
+        }
+
+      }
+      .cta-strip {
+        background-color: $black;
+        height: 70px;
+        width: 100%;
+        display: block;
+        position: relative;
+        z-index: 5;
+        @include breakpoint($tablet-up) {
+          height: 78px;
+        }
+        @include breakpoint($almost-wide) {
+          height: 80px;
+        }
+        .placement{
+          max-width: 800px;
+          margin:0 0 0 20px;
+
+          @include breakpoint($tablet-up) {
+            margin: 0 auto;
+          }
+          a {
+            color:$orange;
+            font-family: $bree-serif;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px;
+            text-transform: uppercase;
+            @include font-size(18,false);
+            @include vertical-align ($position: absolute, $top: 50%);
+            @include breakpoint($desktop-up) {
+              @include vertical-align ($position: absolute, $top: 45%);
+            }
+            .field--name-field-call-to-action-title  {
+              display: inline-block;
+            }
+            &:before {
+              @include homepage-arrows;
+            }
+            &:hover {
+              color: $red;
+              &:before {
+                background-position: 8px 2px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint($tablet-up) {
+    .attachment .views-element-container:first-child .view-content .teaser-inner {
+      &:after {
+        content: "";
+        display: block;
+        background-color: rgba($black,0.5);
+        background-repeat: no-repeat;
+        width: calc(100vw);
+        height: calc(100vw);
+        transform: rotate(55deg);
+        right: 40%;
+        top: 8%;
+        position: absolute;
+        z-index: 2;
+      }
+      .teaser-content {
+        width: 45%;
+        margin-top: 1.5%;
+        position: relative;
+        z-index: 5;
+      }
+    }
+
+    .attachment .views-element-container:first-child .view-content .cta-strip {
+      .placement {
+        a {
+          float: right;
+          position: relative;
+          margin-top: 40px;
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+
+  .attachment .views-element-container:first-child .homepage .view-content {
+    .cta-strip {
+      .placement {
+        @include breakpoint($desktop) {
+          margin: 0 40px 0 0;
+
+        }
+        @include breakpoint($mobile) {
+          float: right;
+          width: 150px;
+        }
+      }
+    }
+  }
+  .view-display-id-hp_first_after_attachment article .teaser-inner {
+    @include breakpoint($tablet-up) {
+      background-image: none;
+    }
+  }
+}

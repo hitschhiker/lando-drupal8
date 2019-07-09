@@ -1,0 +1,44 @@
+.region-content-top {
+  .navigation {
+    background-color: $breadcrumbs;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: $gutter;
+    max-width: $wide;
+    ul {
+      margin: auto;
+      text-align: center;
+      li {
+        display: block;
+        margin-left: 0;
+        @include font-size(14,true);
+        &:first-of-type {
+          margin-left: 0;
+        }
+        a {
+          color:$black;
+          @include font-bree-semibold;
+          @include font-size(16,true);
+          &:hover {
+            color:$red;
+          }
+        }
+        @include breakpoint($small-up) {
+          display: inline-block;
+          color:$black;
+          margin-left: $gutter*2;
+        }
+        &.menu-item--active-trail {
+          a {
+            color:$red;
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+

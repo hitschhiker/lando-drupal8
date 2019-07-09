@@ -1,0 +1,71 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - field_collection
+    - options
+id: field_collection_item.field_right_foot
+field_name: field_right_foot
+entity_type: field_collection_item
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: blul
+      label: 'blau,'
+    -
+      value: brnl
+      label: 'braun,'
+    -
+      value: cood
+      label: 'dunkel-kupfern,'
+    -
+      value: gldl
+      label: 'golden,'
+    -
+      value: grnl
+      label: 'gr&uuml;n,'
+    -
+      value: grsi
+      label: 'gr&uuml;n/silber,'
+    -
+      value: cool
+      label: 'kupfern,'
+    -
+      value: oran
+      label: 'orange,'
+    -
+      value: pnkl
+      label: 'pink,'
+    -
+      value: redl
+      label: 'rot,'
+    -
+      value: resi
+      label: 'rot/silber,'
+    -
+      value: blsi
+      label: 'sicher kein Ring,'
+    -
+      value: slvr
+      label: 'silbern,'
+    -
+      value: viod
+      label: 'violett,'
+    -
+      value: whit
+      label: 'weiss,'
+    -
+      value: blkl
+      label: 'schwarz,'
+    -
+      value: aspe
+      label: 'Aluring Museum Paris'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

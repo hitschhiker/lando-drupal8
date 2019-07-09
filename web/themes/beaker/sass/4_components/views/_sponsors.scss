@@ -1,0 +1,58 @@
+// //PARTNERS & SPONSORS VIEW Blocks
+// //=============================================================================
+// //.block-views-blockcontent-blocks-block-4,
+// //.block-views-blockcontent-blocks-block-6,
+.block-views {
+  h2, h3 {
+    text-align: center;
+  }
+}
+.block-views.block-views-blockcontent-blocks-block-4 {
+    > h2 {
+     @include font-size(48, true);
+     text-transform: uppercase;
+     color:$black;
+     text-align: center;
+     margin: auto;
+     margin-bottom: 0;
+  }
+   .partner-supports { // VIEW BLOCKS
+  //   > h2 {
+  //     @include font-size(48, true);
+  //     text-transform: uppercase;
+  //     color:$black;
+  //     text-align: center;
+  //     margin: auto;
+  //     margin-bottom: 0;
+  //   }
+  //   text-align: center;
+    .view-header {
+      h2 {
+        text-align: center;
+        @include font-size(30, false);
+        line-height: 30px;
+        text-transform: none;
+        @include font-bree-italic;
+        color:$red;
+      }
+    }
+
+    // .view-content {
+    //   //margin-top: $gutter*5;
+    //   display: flex;
+    //   flex-wrap: wrap;
+    //   justify-content: center;
+    //   .views-row {
+    //     margin: 0 auto $gutter*2;
+    //     text-align: center;
+    //     flex: 0 0 auto;
+    //     .views-field-title {
+    //       margin-bottom: $gutter*2;
+    //       text-transform: uppercase;
+    //       @include font-size(15,true);
+    //       @include font-semi-bold;
+    //     }
+    //   }
+    // }
+  }
+}

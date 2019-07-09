@@ -1,0 +1,182 @@
+//HEADER LAYOUT
+// =============================================================================
+
+.page {
+  max-width: $max-width;
+  margin: auto;
+  header.header {
+    height: 52px;
+    display: block;
+    clear: both;
+    width: 100%;
+    max-width: $max-width;
+    margin: auto;
+    position: fixed;
+    top:0;
+    float:none;
+    z-index: 10; // move header above other elements
+    background-color: rgba(255,255,255,1);
+    transition: all 0.6s ease-out;
+    border-bottom: 0px;
+    border-color: $grey_2;
+    @include breakpoint($mobile) {
+      height: 70px;
+      border-bottom: 1px solid $off-white;
+    }
+    @include breakpoint($tablet-up) {
+      background-color: rgba(255,255,255,0);
+      @include linear-gradient(180deg, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 1) 0, white 0, transparent 100%);
+      min-height: 120px;
+      left:auto;
+      right: auto;
+    }
+    .region-header {
+      position: relative;
+      .block-system-branding-block {
+        width: 136px;
+        display: block;
+        margin-left: 10px;
+        @include breakpoint($mobile){ width: 160px; }
+        @include breakpoint($tablet-up) {
+          width: 20%;
+          max-width: 320px;
+          .site-logo {
+            max-width: 100%;
+            display: block;
+            height: auto;
+            width: 100%;
+            img, svg { max-width: 508px; }
+          }
+        }
+      }
+      .search-block-form {
+        display: none;
+          @include breakpoint($tablet-up) {
+          position: absolute;
+          display: block;
+          width: 260px;
+          margin-left: 25%; //975px;
+          right: 448px; //350px;
+          float: left;
+          z-index: 500;
+          //see component.
+        }
+      }
+    }
+
+   #block-languageswitchercontent, #block-languageswitcher  {
+      position: absolute;
+      right:64px;
+      background-color: $off-white;
+      padding: $gutter/4 $gutter $gutter/2;
+      z-index: 1500;
+      width: 84px;
+      display: none;
+      @include breakpoint($tablet-up) {
+        position: absolute;
+        margin-bottom: $gutter/4;
+        right: 223px;
+        float: left;
+        top:$gutter/2;
+        z-index: 100;
+        //see component.
+      }
+    }
+    .current-language-switch {
+      position: absolute;
+      right:64px;
+      top: 0;
+      @include breakpoint($mobile){ top: 15px; }
+      @include breakpoint($tablet-up) {
+        margin-bottom: $gutter/4;
+        right: 225px;
+        float: left;
+        top:1px;
+        span{  font-size: 13px; }
+        //see component.
+      }
+    }
+    .header-login {
+      display: none;
+      @include breakpoint($tablet-up) {
+        display: none; //still off till next phase
+        position: relative;
+        top:$gutter/2;
+        margin-bottom: $gutter/4;
+        left:$gutter;
+        a {
+          color: $black;
+          @include font-size(13px, false);
+          @include font-bree-semibold;
+          &:hover { color: $red; }
+        }
+      }
+    }
+    //Observe and Support
+    .header-cta {
+      display: none;
+      @include breakpoint($tablet-up) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 180px;
+        display: block;
+        height: auto;
+        a {
+          display: block;
+          height: auto;
+          text-align: center;
+          padding: 10px;
+          line-height: 25px;
+          color: $white;
+          font-family: $bree-serif;
+          @include font-size(18px,false);
+          text-transform: uppercase;
+        }
+        .observe-wrapper {
+          a {
+            width: 180px;
+            background-color: $red;
+            &:hover {
+              background-color: $black;
+            }
+          }
+        }
+        .support-wrapper {
+          display: none;
+          text-align: right;
+          position: relative;
+          padding-left:20px;
+          a {
+            width: 160px;
+            background-color: $orange;
+          }
+        }
+      }
+    }
+
+    .block-superfish {
+      position: fixed;
+      top:0;
+      right: 0;
+      @include breakpoint($tablet-up) {
+        position: absolute;
+        right:$gutter*13;
+        top: 52px;
+        display: block;
+        width: auto;
+        z-index: 99;
+      }
+      //see component.
+    }
+    &.sticky {
+      background: $white;
+      position: fixed;
+      min-height: 110px;
+      border-bottom: 1px solid $grey_2;
+      @include breakpoint($mobile){
+        min-height: 70px;
+      }
+    }
+  }
+}

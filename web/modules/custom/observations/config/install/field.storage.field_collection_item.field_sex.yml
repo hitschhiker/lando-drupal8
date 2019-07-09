@@ -1,0 +1,29 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - field_collection
+    - options
+id: field_collection_item.field_sex
+field_name: field_sex
+entity_type: field_collection_item
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: u
+      label: unbekannt
+    -
+      value: m
+      label: M&auml;nnchen
+    -
+      value: f
+      label: Weibchen
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

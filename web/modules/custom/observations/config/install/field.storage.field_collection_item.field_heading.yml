@@ -1,0 +1,68 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - field_collection
+    - options
+id: field_collection_item.field_heading
+field_name: field_heading
+entity_type: field_collection_item
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'N'
+      label: 'N'
+    -
+      value: NNE
+      label: NNO
+    -
+      value: NNW
+      label: NNW
+    -
+      value: NE
+      label: 'NO'
+    -
+      value: NW
+      label: NW
+    -
+      value: E
+      label: O
+    -
+      value: ENE
+      label: ONO
+    -
+      value: ESE
+      label: OSO
+    -
+      value: S
+      label: S
+    -
+      value: SE
+      label: SO
+    -
+      value: SSE
+      label: SSO
+    -
+      value: SSW
+      label: SSW
+    -
+      value: SW
+      label: SW
+    -
+      value: W
+      label: W
+    -
+      value: WNW
+      label: WNW
+    -
+      value: WSW
+      label: WSW
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

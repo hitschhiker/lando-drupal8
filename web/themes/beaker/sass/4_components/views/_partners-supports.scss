@@ -1,0 +1,121 @@
+// PARTNERS & SUPPORTERS PAGE VIEWs
+// =============================================================================
+
+.partner-supports, .view-namenspaten-logo-embed {
+  .view-content{ margin-top: 0 !important; }
+  .item-list {
+    text-align: center;
+    width: 100%;
+    margin-top: $gutter;
+    @include breakpoint($mobile) {
+      width: 220px;
+      margin: 0 auto;
+    }
+    h3 {
+      @include font-bree-semibold;
+      &:after {
+        content: "";
+        display: block;
+        width: 100px;
+        margin: 15px auto;
+        border-bottom: 1px solid $grey_1;
+      }
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0 10px;
+      text-align: center;
+      li {
+        // float: left;
+        display: inline-block;
+        padding: 0 2.5%;
+        // min-height: 155px;
+        // max-width: 220px;
+        margin: $gutter 0 $gutter*2 0;
+        .views-field-title{
+          padding-bottom: $gutter;
+          // h4 {
+          //   font-size: 13px;
+          //   width: 200px;
+          //   line-height: 15px;
+          //   @include font-bree-italic;
+          // }
+        }
+        .views-field-field-image, .field-image {
+          img {
+            // by neomys - bit this skews the images
+            // max-height: 75px;
+            // max-width: 200px;
+
+            // So Rather, we need to choose between on of:
+            max-width: 200px;
+            height: auto;
+            // or
+            // height: 70px;
+            // width: auto;
+            vertical-align: middle;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .path-frontpage & {
+    padding: $gutter $gutter;
+    h3 {
+      @include font-bree-bold;
+      @include font-size(48, false);
+      line-height: 48px;
+      text-align: center;
+      text-transform: uppercase;
+      color:$black;
+      margin: 0 auto $gutter*2;
+      &:after{
+        display: none;
+      }
+      span {
+        color: $red;
+        @include font-bree-italic;
+        text-transform: none;
+        @include font-size(30,false);
+        line-height: 30px;
+      }
+    }
+  }
+  .node--type-page.node--id-189 & {
+    // The actual sponsors view page
+    .item-list {
+      padding:$gutter 0;
+    }
+  }
+  .view-footer {
+    //front pahe with cta button
+    margin-bottom: 20px;
+    .button {
+      margin: auto;
+      text-align: center;
+      a {
+        padding: 8px 24px 10px;
+        color: $white;
+      }
+    }
+  }
+  &.per-bird {
+    h3 {
+      color: $black;
+      padding-bottom: 16px;
+      margin-bottom: 0;
+      @include font-regular;
+      @include font-size(16,true);
+      color:$body-text;
+      &:after {
+        display: none;
+        width: 100px;
+        margin: 0;
+        border-bottom: none;
+      }
+    }
+  }
+}

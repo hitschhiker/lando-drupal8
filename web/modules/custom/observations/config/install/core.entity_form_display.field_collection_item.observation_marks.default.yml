@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.observation_marks.field_list
+    - field.field.field_collection_item.observation_marks.field_remarks
+    - field_collection.field_collection.observation_marks
+id: field_collection_item.observation_marks.default
+targetEntityType: field_collection_item
+bundle: observation_marks
+mode: default
+content:
+  field_list:
+    type: options_buttons
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  field_remarks:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+hidden: {  }

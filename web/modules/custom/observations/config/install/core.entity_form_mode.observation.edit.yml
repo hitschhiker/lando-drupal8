@@ -1,0 +1,9 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - observations
+id: observation.edit
+label: Bearbeiten
+targetEntityType: observation
+cache: true

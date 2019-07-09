@@ -1,0 +1,91 @@
+// LANGUAGE SWITCHER
+// =============================================================================
+//positining layout is in the header.scss
+// Current Language switch
+.current-language-switch {
+  width: 70px;
+  display: block;
+  height: auto;
+  opacity: 1;
+  z-index: 100;
+  cursor: pointer;
+  z-index: 500;
+  span {
+    @include font-bree-semibold;
+    @include font-size(12px, false);
+    color: $black;
+    font-weight: 600;
+    position: relative;
+    height: 40px;
+    width: 70px;
+    display: block;
+    line-height: 40px;
+    @include breakpoint($mobile){
+      line-height: 36px;
+      font-size: 12px
+    }
+    &:before,
+    &:after {
+      content: "";
+      width: 1px;
+      height: 8px;
+      position: absolute;
+      top: 1.3em;
+      right: 4px;
+      background-color: $red;
+      display: block;
+      z-index: 5;
+      display: inline-block;
+
+    }
+    &:hover{ color: $red;
+      &:before,
+      &:after {background-color: $black;}
+     }
+   }
+  span:before{ transform: rotate(45deg); }
+  span:after{  transform: rotate(-45deg); right:9px; }
+  &.closed {
+    opacity: 0;
+    z-index: 1;
+  }
+}
+
+#block-languageswitchercontent, #block-languageswitcher {
+  width: 70px;
+  height: 0;
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  top:6px;
+  &.expanded {
+    transition: all 0.5s ease-out;
+    display: block !important;
+    opacity: 1;
+    height: auto;
+    z-index: 550;
+    ul.links{
+      li{ padding: 2px 0; }
+    }
+  }
+  ul.links{
+    padding: 4px 0 0;
+    margin: 0;
+    li {
+      list-style: none;
+      text-align: center;
+      margin-bottom: 0;
+      a {
+        color: $black;
+        @include font-bree-semibold;
+        @include font-size(13px);
+        &:hover, &:focus {
+          color:$red;
+        }
+      }
+      a.is-active {
+        color: $red;
+      }
+    }
+  }
+}

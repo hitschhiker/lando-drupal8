@@ -1,0 +1,83 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - field_collection
+    - options
+id: field_collection_item.field_behaviour
+field_name: field_behaviour
+entity_type: field_collection_item
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: fly
+      label: fliegend
+    -
+      value: circ
+      label: kreisen
+    -
+      value: flst
+      label: Streckenflug
+    -
+      value: flsy
+      label: Synchronflug
+    -
+      value: cmtc
+      label: 'tr&auml;gt Material in den F&auml;ngen'
+    -
+      value: cbon
+      label: 'tr&auml;gt Knochen'
+    -
+      value: cwho
+      label: 'tr&auml;gt Wolle'
+    -
+      value: cbra
+      label: 'tr&auml;gt &Auml;ste'
+    -
+      value: cani
+      label: 'tr&auml;gt Beutetier'
+    -
+      value: cmtb
+      label: 'tr&auml;gt Material im Schnabel'
+    -
+      value: feed
+      label: fressen
+    -
+      value: fbon
+      label: 'schluckt Knochen'
+    -
+      value: fmet
+      label: 'frisst Fleisch'
+    -
+      value: bobr
+      label: knochenbrechen
+    -
+      value: aggr
+      label: 'Agressives Verhalten'
+    -
+      value: clea
+      label: Gefiederpflege
+    -
+      value: slep
+      label: schlafen
+    -
+      value: perc
+      label: Sitzend
+    -
+      value: amic
+      label: 'sozialer K&ouml;rperkontakt'
+    -
+      value: copu
+      label: Kopulation
+    -
+      value: nstb
+      label: Nestbau
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

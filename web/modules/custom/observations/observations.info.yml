@@ -1,0 +1,12 @@
+name: Observations
+type: module
+description: Module to collect and administer observations of bearded vultures.
+core: 8.x
+package: swild
+
+depencies:
+  - datetime
+  - geolocation
+  - image
+  - country
+  - field_collection

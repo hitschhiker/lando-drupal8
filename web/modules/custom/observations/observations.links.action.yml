@@ -1,0 +1,10 @@
+entity.observation.add_form:
+  route_name: entity.observation.add_form
+  title: 'Add Observation'
+  appears_on:
+    - entity.observation.collection
+entity.observation.add_form:
+  route_name: entity.observation.add_form
+  title: 'Add Observation'
+  appears_on:
+    - entity.observation.collection

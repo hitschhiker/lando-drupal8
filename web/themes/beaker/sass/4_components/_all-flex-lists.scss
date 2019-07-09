@@ -1,0 +1,139 @@
+//main lists
+.bird-listing {
+  //bird listing view on die-vogel - paragraph above has no margin
+  margin-top:$gutter*2;
+}
+
+.tax-list {
+  background: $breadcrumbs;
+  &:first-of-type{
+    background: linear-gradient(to bottom, white 0%,white 100px,#ffffff 100px,$breadcrumbs 100px, $breadcrumbs 100%);
+  }
+  margin-top:$gutter*2;
+}
+ul.bartgeier-lists {
+  //background-color: $breadcrumbs;
+  margin: auto;
+  padding: 0 0 $gutter*5;
+  width: 100%;
+  @include breakpoint($mobile) {
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  li { //tax-item
+    overflow: hidden;
+    list-style: none;
+    float:left;
+    //min-width: 300px;
+    background-color: $white;
+    border:1px solid $grey_2;
+    padding-bottom: $gutter;
+    @include breakpoint($mobile) {
+      flex: 0 0 48%;
+      margin:$gutter 1% $gutter;
+    }
+    @include breakpoint($desktop) {
+      flex: 0 0 48%;
+      margin:$gutter 1% 0;
+    }
+    @include breakpoint($desktop-up) {
+      flex: 0 0 30%;
+      //min-width: 260px;
+      margin:0 1% $gutter*2;
+    }
+    @include breakpoint($wide) {
+      flex: 0 0 23%;
+      min-width: 260px;
+      margin:0 1% $gutter*2;
+    }
+    @include breakpoint($small) {
+      flex: 0 0 100%;
+      margin:$gutter 0;
+    }
+    &:nth-of-type(2n){
+      //even items - every 2
+      position: relative;
+      @include breakpoint($wide) {
+        top: $gutter*4;
+      }
+    }
+    .news-teaser-wrapper, .bird-teaser-wrapper {
+      padding-bottom: $gutter;
+      .field-image {
+        display: block;
+        img {
+          width: 100%;
+          &:hover {
+            opacity: 0.9;
+          }
+        }
+      }
+      h2 a {
+        display: none;
+      }
+      .field-icon {
+        text-align: center;
+        margin: -64px auto -48px;
+        img {
+          width: 10%;
+          min-width: 44px;
+          margin: auto;
+        }
+      }
+      .field-posted {
+        padding: $gutter/2 $gutter 0;
+        color: $grey_1;
+        @include font-size(12);
+        text-align: center;
+      }
+      .field-title, .field-title a {
+        padding: $gutter/2 $gutter 0;
+        color: $red;
+        @include font-size(20);
+        @include font-bree-bold;
+        @include breakpoint($tablet-up) {
+          @include font-size(24);
+        }
+        text-align: center;
+        transition: 0.3s all ease;
+        &:hover, &:focus {
+          color: $black;
+        }
+      }
+      .field-body {
+        color: $body-text;
+        padding: $gutter $gutter 0;
+        p {
+          @include font-size(14, false);
+          line-height: 20px;
+        }
+        text-align: center;
+        .field__item {
+          display: block;
+          @include font-light;
+          @include font-size(14, false);
+          line-height: 20px;
+        }
+      }
+      .field-paragraph {
+        color: $body-text;
+        padding: $gutter $gutter 0;
+        display: block;
+        @include font-light;
+        @include font-size(14, false);
+        line-height: 20px;
+        text-align: center;
+      }
+    }
+    &:nth-of-type(2n) {
+      .field-title {
+        color:$orange;
+        a {
+          color:$orange;
+        }
+      }
+    }
+  }
+}
