@@ -1,6 +1,7 @@
-name: lando-for-platform
+name: landodrupal8
 recipe: drupal8
 config:
   webroot: .
   via: nginx
-  database: 'mariadb:10.1'
+  config: null
+  database: mysql
